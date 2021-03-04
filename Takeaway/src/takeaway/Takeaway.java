@@ -32,7 +32,7 @@ public class Takeaway {
 	double USD = 1.39;
 	double CAD = 1.77;
 	double EUR = 1.15;
-	double TRY = 10.33;
+	double TRY = 10.32;
 
 	double firstnum;
 	double secondnum;
