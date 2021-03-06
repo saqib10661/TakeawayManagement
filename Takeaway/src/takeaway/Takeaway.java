@@ -285,50 +285,50 @@ public class Takeaway {
 		
 		JLabel lblNewLabel_1_3_1 = new JLabel("Tax");
 		lblNewLabel_1_3_1.setFont(new Font("Tahoma", Font.PLAIN, 24));
-		lblNewLabel_1_3_1.setBounds(20, 53, 178, 31);
+		lblNewLabel_1_3_1.setBounds(20, 36, 178, 31);
 		panel_3.add(lblNewLabel_1_3_1);
 		
 		JLabel lblNewLabel_1_1_1_1 = new JLabel("Sub Total");
 		lblNewLabel_1_1_1_1.setFont(new Font("Tahoma", Font.PLAIN, 24));
-		lblNewLabel_1_1_1_1.setBounds(20, 94, 231, 31);
+		lblNewLabel_1_1_1_1.setBounds(20, 77, 231, 31);
 		panel_3.add(lblNewLabel_1_1_1_1);
 		
 		JLabel lblNewLabel_1_2_1_1 = new JLabel("Total");
 		lblNewLabel_1_2_1_1.setFont(new Font("Tahoma", Font.PLAIN, 24));
-		lblNewLabel_1_2_1_1.setBounds(20, 135, 178, 31);
+		lblNewLabel_1_2_1_1.setBounds(20, 160, 178, 31);
 		panel_3.add(lblNewLabel_1_2_1_1);
 		
 		JLabel jlblTax = new JLabel("");
 		jlblTax.setHorizontalAlignment(SwingConstants.RIGHT);
 		jlblTax.setFont(new Font("Tahoma", Font.PLAIN, 24));
 		jlblTax.setBorder(new LineBorder(new Color(0, 0, 0), 2));
-		jlblTax.setBounds(238, 53, 178, 31);
+		jlblTax.setBounds(238, 36, 178, 31);
 		panel_3.add(jlblTax);
 		
 		JLabel jlblSubTotal = new JLabel("");
 		jlblSubTotal.setHorizontalAlignment(SwingConstants.RIGHT);
 		jlblSubTotal.setFont(new Font("Tahoma", Font.PLAIN, 24));
 		jlblSubTotal.setBorder(new LineBorder(new Color(0, 0, 0), 2));
-		jlblSubTotal.setBounds(238, 94, 178, 31);
+		jlblSubTotal.setBounds(238, 77, 178, 31);
 		panel_3.add(jlblSubTotal);
 		
 		JLabel jlblTotal = new JLabel("");
 		jlblTotal.setHorizontalAlignment(SwingConstants.RIGHT);
 		jlblTotal.setFont(new Font("Tahoma", Font.PLAIN, 24));
 		jlblTotal.setBorder(new LineBorder(new Color(0, 0, 0), 2));
-		jlblTotal.setBounds(238, 135, 178, 31);
+		jlblTotal.setBounds(238, 160, 178, 31);
 		panel_3.add(jlblTotal);
 		
 		JLabel lblNewLabel_1_3_1_1 = new JLabel("Discount");
 		lblNewLabel_1_3_1_1.setFont(new Font("Tahoma", Font.PLAIN, 24));
-		lblNewLabel_1_3_1_1.setBounds(20, 12, 178, 31);
+		lblNewLabel_1_3_1_1.setBounds(20, 118, 178, 31);
 		panel_3.add(lblNewLabel_1_3_1_1);
 		
 		JLabel jlblDiscount = new JLabel("");
 		jlblDiscount.setHorizontalAlignment(SwingConstants.RIGHT);
 		jlblDiscount.setFont(new Font("Tahoma", Font.PLAIN, 24));
 		jlblDiscount.setBorder(new LineBorder(new Color(0, 0, 0), 2));
-		jlblDiscount.setBounds(238, 12, 178, 31);
+		jlblDiscount.setBounds(238, 119, 178, 31);
 		panel_3.add(jlblDiscount);
 		
 		JPanel panel_4 = new JPanel();
