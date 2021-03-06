@@ -704,13 +704,15 @@ public class Takeaway {
 				double SubTotal = Double.parseDouble(jlblSubTotal.getText());
 				double Tax = Double.parseDouble(jlblTax.getText());
 				double Total = Double.parseDouble(jlblTotal.getText());
+				double Discount = Double.parseDouble(jlblDiscount.getText());
 				
 				jtxtReceipt.append("\t\nTakeaway Management Sytem:\n\n" + "Chicken Burger:\t\t"
 					+Qty1 + "\nChicken Burger Meal:\t\t" +
 					Qty2 + "\nBacon and Cheese Burger:\t\t" + 
-					 Qty3 + "\nSubtotal of Meal:\t\t"+
-					 SubTotal + "\nTax:\t\t\t" + 
-					 Tax + "\nTotal of Meal:\t\t\t" + 
+					 Qty3 + "\nTax:\t\t\t"+
+					 Tax + "\nSubtotal of Meal\t\t\t" + 
+					 SubTotal +"\nDiscount for Meal\t\t:"+ 
+					 Discount + "\nTotal of Meal:\t\t\t" + 
 					 Total + "\n\nThanks you ordering");
 			}
 		});
