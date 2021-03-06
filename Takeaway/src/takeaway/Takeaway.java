@@ -319,6 +319,18 @@ public class Takeaway {
 		jlblTotal.setBounds(238, 135, 178, 31);
 		panel_3.add(jlblTotal);
 		
+		JLabel lblNewLabel_1_3_1_1 = new JLabel("Discount");
+		lblNewLabel_1_3_1_1.setFont(new Font("Tahoma", Font.PLAIN, 24));
+		lblNewLabel_1_3_1_1.setBounds(20, 12, 178, 31);
+		panel_3.add(lblNewLabel_1_3_1_1);
+		
+		JLabel jlblDiscount = new JLabel("");
+		jlblDiscount.setHorizontalAlignment(SwingConstants.RIGHT);
+		jlblDiscount.setFont(new Font("Tahoma", Font.PLAIN, 24));
+		jlblDiscount.setBorder(new LineBorder(new Color(0, 0, 0), 2));
+		jlblDiscount.setBounds(238, 12, 178, 31);
+		panel_3.add(jlblDiscount);
+		
 		JPanel panel_4 = new JPanel();
 		panel_4.setBorder(new LineBorder(new Color(0, 0, 0), 8));
 		panel_4.setBounds(1147, 74, 358, 538);
