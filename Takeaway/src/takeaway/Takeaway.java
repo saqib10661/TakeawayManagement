@@ -816,6 +816,17 @@ public class Takeaway {
 					jlblCostOfDrinks.setText("0");
 				}
 				
+				//----------------------------------------Discount-------------------------------------------
+				
+				double cost = Double.parseDouble(jlblCostOfMeal.getText());
+				double discount = cost * 5 /100;
+				
+				if (cost > 20)
+				{
+					String total = String.format("%.2f", discount);
+					jlblDiscount.setText(total);
+				}
+				
 				//----------------------------------------Tax Rate--------------------------------------------
 				
 				double cTotal1 = Double.parseDouble(jlblCostOfDrinks.getText());
@@ -831,6 +842,7 @@ public class Takeaway {
 				
 				//----------------------------------------Total--------------------------------------------
 				
+				double cTotalDiscount = Double.parseDouble(jlblDiscount.getText());
 				double cTotal4 = Double.parseDouble(jlblTax.getText());
 				
 				double subTotal = (cTotal1 + cTotal2 + cTotal3);
@@ -838,7 +850,8 @@ public class Takeaway {
 				jlblSubTotal.setText(isubTotal);
 				
 				double allTotal = (cTotal1 + cTotal2 + cTotal3 + cTotal4);
-				String iTotal = String.format(" %.2f", allTotal);
+				double discountTotal = allTotal - cTotalDiscount;
+				String iTotal = String.format(" %.2f", discountTotal);
 				jlblTotal.setText(iTotal);
 				
 				String iTaxTotal = String.format(" %.2f", cTotal4);
