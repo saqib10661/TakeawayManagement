@@ -763,7 +763,7 @@ public class Takeaway {
 				double Drinks = Double.parseDouble(jtxtQty.getText());
 				double Apple_Juice = 1.99 * Drinks;
 				double Coke = 1.60 * Drinks;
-				double Pepsi = 1.60 * Drinks;
+				double Pepsi = 1.65 * Drinks;
 				double Fanta = 1.60 * Drinks;
 				double Tea = 1.00 * Drinks;
 				double Coffee = 2.00 * Drinks;
