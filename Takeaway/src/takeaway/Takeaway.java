@@ -845,7 +845,7 @@ public class Takeaway {
 				double cTotalDiscount = Double.parseDouble(jlblDiscount.getText());
 				double cTotal4 = Double.parseDouble(jlblTax.getText());
 				
-				double subTotal = (cTotal1 + cTotal2 + cTotal3);
+				double subTotal = (cTotal1 + cTotal2 + cTotal3 + cTotal4);
 				String isubTotal = String.format(" %.2f", subTotal);
 				jlblSubTotal.setText(isubTotal);
 				
