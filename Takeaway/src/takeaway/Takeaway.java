@@ -8,6 +8,7 @@ import java.awt.Color;
 import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.JTextField;
+import javax.swing.SpinnerDateModel;
 import javax.swing.SwingConstants;
 import javax.swing.JTabbedPane;
 import javax.swing.JButton;
@@ -19,15 +20,12 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JTextArea;
 import javax.swing.JRadioButton;
+import javax.swing.JSpinner;
 
 public class Takeaway {
 
 	private JFrame frame;
-	private JTextField jtxtChicBurger;
-	private JTextField jtxtChicBurgerMeal;
-	private JTextField jtxtCBurger;
 	private JTextField txtDisplay;
-	private JTextField jtxtQty;
 	private JTextField jtxtConversion;
 	
 	double USD = 1.39;
@@ -93,24 +91,6 @@ public class Takeaway {
 		lblNewLabel_1_2.setBounds(24, 131, 178, 31);
 		panel.add(lblNewLabel_1_2);
 		
-		jtxtChicBurger = new JTextField();
-		jtxtChicBurger.setFont(new Font("Tahoma", Font.PLAIN, 24));
-		jtxtChicBurger.setBounds(326, 25, 188, 31);
-		panel.add(jtxtChicBurger);
-		jtxtChicBurger.setColumns(10);
-		
-		jtxtChicBurgerMeal = new JTextField();
-		jtxtChicBurgerMeal.setFont(new Font("Tahoma", Font.PLAIN, 24));
-		jtxtChicBurgerMeal.setColumns(10);
-		jtxtChicBurgerMeal.setBounds(326, 79, 188, 31);
-		panel.add(jtxtChicBurgerMeal);
-		
-		jtxtCBurger = new JTextField();
-		jtxtCBurger.setFont(new Font("Tahoma", Font.PLAIN, 24));
-		jtxtCBurger.setColumns(10);
-		jtxtCBurger.setBounds(326, 131, 188, 31);
-		panel.add(jtxtCBurger);
-		
 		JLabel lblNewLabel_3 = new JLabel("Drinks");
 		lblNewLabel_3.setFont(new Font("Tahoma", Font.PLAIN, 24));
 		lblNewLabel_3.setBounds(24, 183, 149, 31);
@@ -124,14 +104,8 @@ public class Takeaway {
 		
 		JLabel lblNewLabel_4 = new JLabel("Qty");
 		lblNewLabel_4.setFont(new Font("Tahoma", Font.PLAIN, 24));
-		lblNewLabel_4.setBounds(326, 183, 51, 31);
+		lblNewLabel_4.setBounds(360, 183, 51, 31);
 		panel.add(lblNewLabel_4);
-		
-		jtxtQty = new JTextField();
-		jtxtQty.setFont(new Font("Tahoma", Font.PLAIN, 24));
-		jtxtQty.setBounds(326, 222, 188, 31);
-		panel.add(jtxtQty);
-		jtxtQty.setColumns(10);
 		
 		JSeparator separator = new JSeparator();
 		separator.setBounds(24, 177, 532, 6);
@@ -144,8 +118,28 @@ public class Takeaway {
 		
 		JRadioButton jCTax = new JRadioButton("Tax");
 		jCTax.setFont(new Font("Tahoma", Font.PLAIN, 24));
-		jCTax.setBounds(324, 259, 205, 34);
+		jCTax.setBounds(351, 257, 205, 34);
 		panel.add(jCTax);
+		
+		JSpinner spinnerCKBurger = new JSpinner();
+		spinnerCKBurger.setFont(new Font("Tahoma", Font.PLAIN, 24));
+		spinnerCKBurger.setBounds(366, 25, 102, 31);
+		panel.add(spinnerCKBurger);
+		
+		JSpinner spinnerCBMeal = new JSpinner();
+		spinnerCBMeal.setFont(new Font("Tahoma", Font.PLAIN, 24));
+		spinnerCBMeal.setBounds(366, 79, 102, 31);
+		panel.add(spinnerCBMeal);
+		
+		JSpinner spinnerCBurger = new JSpinner();
+		spinnerCBurger.setFont(new Font("Tahoma", Font.PLAIN, 24));
+		spinnerCBurger.setBounds(366, 138, 102, 31);
+		panel.add(spinnerCBurger);
+		
+		JSpinner spinnerQty = new JSpinner();
+		spinnerQty.setFont(new Font("Tahoma", Font.PLAIN, 24));
+		spinnerQty.setBounds(360, 224, 108, 31);
+		panel.add(spinnerQty);
 		
 		JPanel panel_1 = new JPanel();
 		panel_1.setBorder(new LineBorder(new Color(0, 0, 0), 8));
@@ -684,10 +678,10 @@ public class Takeaway {
 				jlblSubTotal.setText(null);
 				jlblTax.setText(null);
 				jlblTotal.setText(null);
-				jtxtChicBurger.setText(null);
-				jtxtChicBurgerMeal.setText(null);
-				jtxtCBurger.setText(null);
-				jtxtQty.setText(null);
+				spinnerCKBurger.setValue(0);
+				spinnerCBMeal.setValue(0);
+				spinnerCBurger.setValue(0);
+				spinnerQty.setValue(0);
 				jtxtConversion.setText(null);
 				jcmbDrink.setSelectedItem("Select a drink");
 				jcmbCurrency.setSelectedItem("Choose one...");
@@ -704,9 +698,9 @@ public class Takeaway {
 		jBtnReceipt.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				double Qty1 = Double.parseDouble(jtxtChicBurger.getText());
-				double Qty2 = Double.parseDouble(jtxtChicBurgerMeal.getText());
-				double Qty3 = Double.parseDouble(jtxtCBurger.getText());
+				int Qty1 = (Integer) spinnerCKBurger.getValue();
+				int Qty2 = (Integer) spinnerCBMeal.getValue();
+				int Qty3 = (Integer) spinnerCBurger.getValue();
 				double SubTotal = Double.parseDouble(jlblSubTotal.getText());
 				double Tax = Double.parseDouble(jlblTax.getText());
 				double Total = Double.parseDouble(jlblTotal.getText());
@@ -730,7 +724,7 @@ public class Takeaway {
 		jBtnTotal.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				double ChicBurger = Double.parseDouble(jtxtChicBurger.getText());
+				int ChicBurger = (Integer) spinnerCKBurger.getValue();
 				double iChicBurger = 2.39;
 				double Burger;
 				
@@ -738,7 +732,7 @@ public class Takeaway {
 				String pMeal = String.format("%.2f", Burger);
 				jlblCostOfMeal.setText(pMeal);
 				
-				double ChicBurgerMeal = Double.parseDouble(jtxtChicBurger.getText());
+				int ChicBurgerMeal = (Integer) spinnerCBMeal.getValue();
 				double iChicBurgerMeal = 4.39;
 				double BurgerMeal;
 				
@@ -746,7 +740,7 @@ public class Takeaway {
 				String cbMeal = String.format("%.2f", BurgerMeal + Burger);
 				jlblCostOfMeal.setText(cbMeal);
 				
-				double CheeseBurger = Double.parseDouble(jtxtCBurger.getText());
+				int CheeseBurger = (Integer) spinnerCBurger.getValue();
 				double CheeseBurgerPrice = 3.39;
 				double CheeseBurgerMeal;
 				
@@ -768,7 +762,7 @@ public class Takeaway {
 				
 				//------------------------------------Drinks---------------------------------------------------------------
 				
-				double Drinks = Double.parseDouble(jtxtQty.getText());
+				int Drinks = (Integer) spinnerQty.getValue();
 				double Apple_Juice = 1.99 * Drinks;
 				double Coke = 1.60 * Drinks;
 				double Pepsi = 1.60 * Drinks;
@@ -873,6 +867,8 @@ public class Takeaway {
 				String iTaxTotal = String.format(" %.2f", cTotal4);
 				jlblTax.setText(iTaxTotal);
 				
+				
+				
 			}
 		});
 		jBtnTotal.setFont(new Font("Tahoma", Font.PLAIN, 24));
@@ -883,5 +879,6 @@ public class Takeaway {
 		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 50));
 		lblNewLabel.setBounds(392, 0, 808, 61);
 		frame.getContentPane().add(lblNewLabel);
+		
 	}
 }
