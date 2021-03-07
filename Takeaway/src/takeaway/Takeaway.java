@@ -156,20 +156,20 @@ public class Takeaway {
 		JComboBox<String> jcmbCurrency = new JComboBox<>();
 		jcmbCurrency.setModel(new DefaultComboBoxModel<>(new String[] {"Choose one...", "USA", "Canada", "France", "Germany", "Turkey", "Spain", "Italy"}));
 		jcmbCurrency.setFont(new Font("Tahoma", Font.PLAIN, 24));
-		jcmbCurrency.setBounds(84, 23, 286, 31);
+		jcmbCurrency.setBounds(84, 141, 286, 31);
 		panel_1.add(jcmbCurrency);
 		
 		jtxtConversion = new JTextField();
 		jtxtConversion.setFont(new Font("Tahoma", Font.PLAIN, 24));
 		jtxtConversion.setColumns(10);
-		jtxtConversion.setBounds(84, 84, 286, 56);
+		jtxtConversion.setBounds(84, 62, 286, 56);
 		panel_1.add(jtxtConversion);
 		
 		JLabel jlblConversion = new JLabel("");
 		jlblConversion.setHorizontalAlignment(SwingConstants.CENTER);
 		jlblConversion.setFont(new Font("Tahoma", Font.PLAIN, 24));
 		jlblConversion.setBorder(new LineBorder(new Color(0, 0, 0), 2));
-		jlblConversion.setBounds(106, 173, 243, 31);
+		jlblConversion.setBounds(107, 194, 243, 31);
 		panel_1.add(jlblConversion);
 		
 		JButton jBtnConvert = new JButton("Convert");
@@ -220,7 +220,7 @@ public class Takeaway {
 			}
 		});
 		jBtnConvert.setFont(new Font("Tahoma", Font.PLAIN, 24));
-		jBtnConvert.setBounds(94, 226, 125, 43);
+		jBtnConvert.setBounds(84, 243, 125, 43);
 		panel_1.add(jBtnConvert);
 		
 		JButton jBtnClear = new JButton("Clear");
@@ -233,8 +233,13 @@ public class Takeaway {
 			}
 		});
 		jBtnClear.setFont(new Font("Tahoma", Font.PLAIN, 24));
-		jBtnClear.setBounds(246, 226, 125, 43);
+		jBtnClear.setBounds(245, 243, 125, 43);
 		panel_1.add(jBtnClear);
+		
+		JLabel lblNewLabel_2 = new JLabel("\u00A3 Converter");
+		lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 24));
+		lblNewLabel_2.setBounds(157, 21, 132, 31);
+		panel_1.add(lblNewLabel_2);
 		
 		JPanel panel_2 = new JPanel();
 		panel_2.setBorder(new LineBorder(new Color(0, 0, 0), 8));
