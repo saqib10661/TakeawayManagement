@@ -18,6 +18,7 @@ import javax.swing.JSeparator;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JTextArea;
+import javax.swing.JRadioButton;
 
 public class Takeaway {
 
@@ -121,11 +122,6 @@ public class Takeaway {
 		jcmbDrink.setBounds(24, 224, 178, 27);
 		panel.add(jcmbDrink);
 		
-		JCheckBox jCDelivery = new JCheckBox("Home Delivery");
-		jCDelivery.setFont(new Font("Tahoma", Font.PLAIN, 24));
-		jCDelivery.setBounds(24, 257, 188, 34);
-		panel.add(jCDelivery);
-		
 		JLabel lblNewLabel_4 = new JLabel("Qty");
 		lblNewLabel_4.setFont(new Font("Tahoma", Font.PLAIN, 24));
 		lblNewLabel_4.setBounds(326, 183, 51, 31);
@@ -137,14 +133,19 @@ public class Takeaway {
 		panel.add(jtxtQty);
 		jtxtQty.setColumns(10);
 		
-		JCheckBox jCTax = new JCheckBox("Tax");
-		jCTax.setFont(new Font("Tahoma", Font.PLAIN, 24));
-		jCTax.setBounds(329, 257, 93, 34);
-		panel.add(jCTax);
-		
 		JSeparator separator = new JSeparator();
 		separator.setBounds(24, 177, 532, 6);
 		panel.add(separator);
+		
+		JRadioButton jCDelivery = new JRadioButton("Home Delivery");
+		jCDelivery.setFont(new Font("Tahoma", Font.PLAIN, 24));
+		jCDelivery.setBounds(24, 257, 205, 34);
+		panel.add(jCDelivery);
+		
+		JRadioButton jCTax = new JRadioButton("Tax");
+		jCTax.setFont(new Font("Tahoma", Font.PLAIN, 24));
+		jCTax.setBounds(324, 259, 205, 34);
+		panel.add(jCTax);
 		
 		JPanel panel_1 = new JPanel();
 		panel_1.setBorder(new LineBorder(new Color(0, 0, 0), 8));
@@ -828,6 +829,10 @@ public class Takeaway {
 					String total = String.format("%.2f", discount);
 					jlblDiscount.setText(total);
 				}
+				else
+				{
+					jlblDiscount.setText("0");
+				}
 				
 				//----------------------------------------Tax Rate--------------------------------------------
 				
@@ -840,6 +845,10 @@ public class Takeaway {
 				{
 					String iTotal = String.format("%.2f", AllTotal);
 					jlblTax.setText(iTotal);
+				}
+				else
+				{
+					jlblTax.setText("0");
 				}
 				
 				//----------------------------------------Total--------------------------------------------
@@ -867,7 +876,7 @@ public class Takeaway {
 		
 		JLabel lblNewLabel = new JLabel("Takeaway Management System\r\n");
 		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 50));
-		lblNewLabel.setBounds(392, 0, 808, 56);
+		lblNewLabel.setBounds(392, 0, 808, 61);
 		frame.getContentPane().add(lblNewLabel);
 	}
 }
